@@ -1,52 +1,54 @@
 import React from 'react';
-import {FaGithub} from "react-icons/fa";
-import {CgFileDocument} from "react-icons/cg";
+import { FaGithub } from "react-icons/fa";
+import { CgFileDocument } from "react-icons/cg";
 
-
-const  ProjectBox = ({projectPhoto, projectName}) => {
+const ProjectBox = ({ projectPhoto, projectName }) => {
+  // Updated descriptions and links with matching keys
   const desc = {
-    TindogDesc : "This website is a landing page of Tinder but for dogs. It is a responsive website which was made to understand Bootstrap. I also learned how to host my project on Github and then how to deploy that project using Github pages.",
-    TindogGithub : "https://github.com/DevanshSahni/tindog",
-    TindogWebsite : "https://devanshsahni.github.io/tindog/",
+    Diabetes_Prediction_using_ML: {
+      desc: "This project predicts diabetes using machine learning algorithms, based on medical data. It includes data preprocessing, model training, and evaluation.",
+      github: "https://github.com/srinadh-ghattamneni/Diabetes-Predection-using-ML", // Update this URL
+      website: "" ,// Leave empty if no demo
+      name:"Diabetes Prediction using ML"
+    },
+    To_Do_app: {
+      desc: "A simple to-do app that allows users to create, edit, and delete tasks. It was built to understand react functionality.",
+      github: "ss", // Leave empty if no GitHub repo
+      website: "ss", // Leave empty if no demo
+      name:"To Do app"
+    }
+  };
 
-    RogFreeDesc : "A website that shows you over seven specialized yoga postures for specific diseases or health problems. This was a group project made in a team of two for a 36-hour-long online hackathon named Hackodisha 2.0.",
-    RogFreeGithub : "https://github.com/DevanshSahni/Rog-Free",
-    RogFreeWebsite : "https://devanshsahni.github.io/Rog-Free/",
+  // Safely access the project description and links
+  const projectDetails = desc[projectName];
 
-    NewsletterDesc:"A newsletter signup site made using Mailchimp API where the signups can be monitored from the MailChimp account. This project was made to understand API integration, environment variables and vercel deployment.",
-    NewsletterGithub:"",
-    NewsletterWebsite:"https://newsletter-signup-teal.vercel.app/",
-    
-    WigglesDesc:"An innovative pet management web app enabling pet parents to create unique pet IDs, securely store and share vaccination records, and generate QR codes for pet profiles, enhancing safety.",
-    WigglesGithub:"https://github.com/DevanshSahni/Wiggles",
-    WigglesWebsite:"https://wiggles.vercel.app/",
+  if (!projectDetails) {
+    // Return an error or a fallback if the projectName doesn't match any key
+    return <div>Error: Project details not found for {projectName}</div>;
   }
 
-  let show ='';
-  if(desc[projectName + 'Github']===""){
-    show="none";
-  }
-    
+  // Conditional rendering for Github and Website links
+  const showGithub = projectDetails.github !== "" ? "block" : "none";
+  const showWebsite = projectDetails.website !== "" ? "block" : "none";
+
   return (
-    <div className='projectBox'> 
-        <img className='projectPhoto' src={projectPhoto} alt="Project display" /> 
-        <div>
-            <br />
-            <h3>{projectName}</h3>
-            <br />
-            {desc[projectName + 'Desc']}
-            <br />
-
-            <a style={{display:show}} href={desc[projectName + 'Github']} target='_blank'>
-              <button className='projectbtn'><FaGithub/> Github</button>
-            </a>
-
-            <a href={desc[projectName + 'Website']} target='_blank'>
-              <button className='projectbtn'><CgFileDocument/> Demo</button>
-            </a>
-        </div>
+    <div className='projectBox'>
+      <img className='projectPhoto' src={projectPhoto} alt={`${projectName} display`} />
+      <div>
+        <br />
+        <h3>{projectDetails.name}</h3>
+        <br />
+        <p>{projectDetails.desc}</p>
+        <br />
+        <a style={{ display: showGithub }} href={projectDetails.github} target='_blank' rel='noopener noreferrer'>
+          <button className='projectbtn'><FaGithub /> Github</button>
+        </a>
+        <a style={{ display: showWebsite }} href={projectDetails.website} target='_blank' rel='noopener noreferrer'>
+          <button className='projectbtn'><CgFileDocument /> Demo</button>
+        </a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default  ProjectBox
+export default ProjectBox;

@@ -342,9 +342,10 @@ b{
   width: max(15%,150px);
   height: 150px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 0px 25px 25px 0px;
+  justify-content: space-evenly;
+  margin: 0px 30px 30px 0px;
   border: 3px solid #431f47;
   font-size: 64px;
   border-radius: 5px;
@@ -361,6 +362,12 @@ b{
   font-size: 36px;
   letter-spacing: 0.6px;
 }
+
+.skill-name{
+  text-align: center;
+  font-size:1.3rem;
+}
+
 
 @media(max-width: 500px) {
   .AboutText{
@@ -421,6 +428,9 @@ b{
   display: block;
   width: 100%;
   margin: 20px 0px;
+  height: 325px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image maintains aspect ratio and covers the area */
+  border-radius: 10px; /* Adds rounded corners */
 }
 
 .projectbtn{
@@ -439,6 +449,7 @@ b{
   border-style: none;
 }
 
+/* additonals for constant  project cards */
 
 /* Resume */
 

@@ -12,8 +12,8 @@ const About = () => {
           <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
           <p>
             Hi, my name is <b>Srinadh Ghattamneni</b> and I am from Ongole, India.
-            I'm a <b>MERN stack web developer</b> and a third year college student pursuing <b>BTech in CSE at SRKREC,Bhimavaram.</b>. <br/><br/>
-            I have done an internship as an ML intern at NIELIT virtual acadamy.
+            'm a <b>MERN stack web developer</b> and a final-year B.Tech student in <b>Computer Science and Engineering</b> at <b>SRKREC, Bhimavaram</b>.
+
             I love to create  projects with beautiful designs, you can check out some of my work in the projects section.<br/><br/>
             I am <b>open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are in the footer.<br/>
            
@@ -41,7 +41,7 @@ const About = () => {
     <Skills skill='Git' />
     <Skills skill='Github' />
     <Skills skill='Javascript' />
-    <Skills skill='C++' />
+    <Skills skill="C/C++" />
     <Skills skill='Java' />
     <Skills skill='Python' />
     <Skills skill='SQL' />

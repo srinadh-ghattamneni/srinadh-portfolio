@@ -14,14 +14,17 @@ const iconMap = {
     git: <FaGitAlt />,
     github: <FaGithub />,
     javascript: <DiJavascript1 />,
-    'c++': <CgCPlusPlus />,
+    'c/c++': <CgCPlusPlus />,
     java: <FaJava />,
     python: <FaPython />,
     sql: <TbFileTypeSql />,
     html: <FaHtml5 />,
     css: <SiCss3 />,
     bootstrap: <FaBootstrap />,
-    r:<FaRProject />
+    r:<FaRProject />,
+   
+
+
 
 };
 

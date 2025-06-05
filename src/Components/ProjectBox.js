@@ -3,31 +3,47 @@ import { FaGithub } from "react-icons/fa";
 import { CgFileDocument } from "react-icons/cg";
 
 const ProjectBox = ({ projectPhoto, projectName }) => {
-  // Updated descriptions and links with matching keys
   const desc = {
-    Diabetes_Prediction_using_ML: {
-      desc: "This project predicts diabetes using machine learning algorithms, based on medical data. It includes data preprocessing, model training, and evaluation.",
-      github: "https://github.com/srinadh-ghattamneni/Diabetes-Predection-using-ML", // Update this URL
-      website: "" ,// Leave empty if no demo
-      name:"Diabetes Prediction using ML"
+    Holiday_Hub: {
+      name: "Holiday Hub",
+      desc: "A full-stack travel booking website allowing users to search destinations, view hotel options, and make bookings. Features authentication, REST APIs, and MongoDB.",
+      github: "https://github.com/srinadh-ghattamneni",
+      website: ""
+    },
+    ChatSphere: {
+      name: "ChatSphere",
+      desc: "A real-time MERN-based chat application with WhatsApp-like UI, Socket.io messaging, user auth, private/group chat support, and responsive design.",
+      github: "https://github.com/srinadh-ghattamneni",
+      website: ""
     },
     To_Do_app: {
-      desc: "A simple to-do app that allows users to create, edit, and delete tasks. It was built to understand react functionality.",
-      github: "ss", // Leave empty if no GitHub repo
-      website: "ss", // Leave empty if no demo
-      name:"To Do app"
+      name: "ToDo App",
+      desc: "A basic yet functional React app that allows users to add, delete, and manage daily tasks efficiently, with support for local storage. Useful for understanding state and props.",
+      github: "https://github.com/srinadh-ghattamneni",
+      website: ""
+    },
+    Diabetes_Prediction_using_ML: {
+      name: "Diabetes Prediction using ML",
+      desc: "Machine learning-based app to predict diabetes using medical attributes. Includes data preprocessing, model training, and accuracy evaluation.",
+      github: "https://github.com/srinadh-ghattamneni",
+      website: ""
+    },
+    Loan_Approval_prediction: {
+      name: "Loan Approval Prediction",
+      desc: "A web app to predict loan approval based on applicant details. Frontend in PHP/JS, backend with Flask ML API, and MySQL DB integration.",
+      github: "https://github.com/srinadh-ghattamneni",
+      website: ""
     }
   };
 
-  // Safely access the project description and links
-  const projectDetails = desc[projectName];
+  // Convert projectName to match key format (replace spaces with underscores)
+  const formattedName = projectName.replace(/\s+/g, "_");
+  const projectDetails = desc[formattedName];
 
   if (!projectDetails) {
-    // Return an error or a fallback if the projectName doesn't match any key
     return <div>Error: Project details not found for {projectName}</div>;
   }
 
-  // Conditional rendering for Github and Website links
   const showGithub = projectDetails.github !== "" ? "block" : "none";
   const showWebsite = projectDetails.website !== "" ? "block" : "none";
 

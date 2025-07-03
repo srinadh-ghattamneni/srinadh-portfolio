@@ -29,13 +29,13 @@ const iconMap = {
 };
 
 const Skills = ({ skill }) => {
-    const normalizedSkill = skill.toLowerCase();  // Normalize the skill for consistency
-    const Icon = iconMap[normalizedSkill];  // Get the corresponding icon from the map
+    const normalizedSkill = skill.toLowerCase(); 
+    const Icon = iconMap[normalizedSkill]; 
 
     return (
         <div className='SkillBox' title={skill}>
-            {Icon || <span>Icon Not Available</span>} {/* Fallback if icon doesn't exist */}
-            <p class="skill-name">{skill}</p> {/* Display skill name below the icon */}
+            {Icon || <span>Icon Not Available</span>} 
+            <p class="skill-name">{skill}</p> 
         </div>
     );
 };

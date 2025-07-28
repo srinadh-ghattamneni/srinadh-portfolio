@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <h4>Developed by Srinadh Ghattamneni</h4>
-      <h4>Copyright &copy; 2024 SG</h4>
+      <h4>Copyright &copy; 2025 SG</h4>
       <div className='footerLinks'>
         <a href="https://github.com/srinadh-ghattamneni" target='_blank'><FaGithub/></a>
         <a href="https://www.linkedin.com/in/srinadhghattamneni/" target='_blank'><FaLinkedin/></a>

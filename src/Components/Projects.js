@@ -6,6 +6,7 @@ import Todo from '../images/Todo.png';
 import ChatSphere from '../images/ChatSphere.png';
 import HolidayHub from '../images/HolidayHub.png';
 import Loan from '../images/Loan.png';
+import AIChatBot from '../images/AIChatBot.png'; 
 
 const Projects = () => {
   return (
@@ -16,7 +17,8 @@ const Projects = () => {
         <ProjectBox projectPhoto={ChatSphere} projectName="ChatSphere" />
         <ProjectBox projectPhoto={Todo} projectName="To_Do_app" />
         <ProjectBox projectPhoto={Diabetes} projectName="Diabetes_Prediction_using_ML" />
-        <ProjectBox projectPhoto={Loan} projectName="Loan Approval prediction" />
+        <ProjectBox projectPhoto={Loan} projectName="Loan_Approval_prediction" />
+        <ProjectBox projectPhoto={AIChatBot} projectName="AI_Chat_Bot" />
       </div>
     </div>
   );
